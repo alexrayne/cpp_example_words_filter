@@ -63,7 +63,10 @@ int main(int argc, char **argv) {
         }
 
         case 'h':{
-            printf("Usage: %s {<options> {file...}* }*\n", argv[0]);
+            printf("Usage: %s {<options> {file...}* }*\n"
+                   "    -k --keysmap <file> - provide an chars map for LR1 lookup filtering"
+                   "    -o --out <file>     - denote destination file. by default prints to stdout"
+                    , argv[0]);
             break;
         }
 
