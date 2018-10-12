@@ -28,7 +28,7 @@ bool ENBindedkeysMap::is_valid_char(char x) const {
     if (!set_t::is_valid_char(x))
         return false;
     const set_t& node = _map[idx(x)];
-    return node.count() > 0;
+    return !node.none();
 };
 
 bool ENBindedkeysMap::is_allowed(char key, char next) const{
